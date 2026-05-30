@@ -148,7 +148,6 @@ export default function CustomizePage(): ReactElement {
     badgeHeight,
     grace,
     language,
-  });
     timezone,
   ]);
 
