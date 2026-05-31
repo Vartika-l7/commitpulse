@@ -724,7 +724,7 @@ describe('streakParamsSchema — view fallback behavior', () => {
 describe('streakParamsSchema — Date Range Boundary Robustness (Variation 1)', () => {
   it('should process validation safely and fallback when partial or missing year parameters are passed', () => {
     // Arrange: Provide a mock payload missing a full YYYY format sequence
-=======
+
 describe('streakParamsSchema — accent parameter HEX color validation', () => {
   it('rejects an invalid hex color like "#ZZZZZZZ" for accent', () => {
     // #ZZZZZZZ contains non-hex characters — must fail schema validation
