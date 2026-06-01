@@ -98,6 +98,7 @@ export async function GET(request: Request) {
       disable_particles,
       glow,
       format,
+      days,
     } = parseResult.data;
     const normalizedView = view as 'default' | 'monthly' | 'heatmap' | 'pulse';
     const themeName = theme || 'dark';
@@ -239,6 +240,21 @@ export async function GET(request: Request) {
         to,
       });
       versusCalendar = versusData.calendar;
+    }
+
+    if (days) {
+      const allDays = calendar.weeks.flatMap((w) => w.contributionDays);
+
+      const filteredDays = allDays.slice(-days);
+
+      calendar = {
+        totalContributions: filteredDays.reduce((sum, d) => sum + d.contributionCount, 0),
+        weeks: [
+          {
+            contributionDays: filteredDays,
+          },
+        ],
+      };
     }
 
     // ─── JSON output mode ──────────────────────────────────────────────────
