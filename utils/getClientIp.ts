@@ -121,7 +121,8 @@ export function getClientIp(
   }
 
   // 4. Ultimate Fallback
-  if (process.env.NODE_ENV === 'development') {
+  // 4. Ultimate Fallback
+  if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
     return '127.0.0.1';
   }
 
