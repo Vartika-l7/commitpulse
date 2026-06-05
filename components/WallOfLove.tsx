@@ -636,7 +636,7 @@ export function WallOfLove() {
       {/* ── CTA Button for Review Form ── */}
       <div className="mt-16 flex justify-center px-6">
         <Link
-          href="/submit-review" // ← Change this to your actual review form page route
+          href="/reviewform"
           className="group relative inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-emerald-600 via-purple-600 to-pink-600 px-10 py-4 text-lg font-semibold text-white shadow-xl shadow-purple-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95 overflow-hidden"
         >
           <span>Share Your Experience</span>
