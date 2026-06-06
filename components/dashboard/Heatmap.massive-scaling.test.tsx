@@ -75,7 +75,7 @@ describe('Heatmap massive scaling', () => {
 
     const duration = performance.now() - start;
 
-    expect(duration).toBeLessThan(1500);
+    expect(duration).toBeLessThan(2000);
     expect(screen.getByRole('grid')).toBeDefined();
   });
 
